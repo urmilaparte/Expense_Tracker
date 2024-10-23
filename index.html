@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treasure Hunter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="box">
+        <div class="container">
+            <img src="logo.png" alt="logo">
+            <h1>Treasure Hunter</h1>
+            <button id="themeToggle">Theme</button>
+        </div>
+
+        <div class="image-box">
+            <div class="img1">
+                <button onclick="toggleIncomeSection()">Wallet</button>
+            </div>
+            <div class="img2">
+                
+                <button onclick="toggleExpenseSection()">Expense</button>
+            </div>
+        </div>
+
+
+
+        <div id="income-input-section" class="input-income" style="display: none;">
+            <h3>Add Income</h3>
+            <div class="input-fields">
+            <input type="text" id="income-description" placeholder="Income Description">
+            <input type="number" id="income-amount" placeholder="Income Amount">
+            <button onclick="addIncome()">Add Income</button>
+            </div>
+        </div>
+
+        <div id="expense-input-section" class="input-expenses" style="display: none;">
+            <h3>Add Expense</h3>
+            <div class="input-fields">
+            <input type="text" id="expense-description" placeholder="Expense Description">
+            <input type="number" id="expense-amount" placeholder="Expense Amount">
+            <input type="text" id="expense-category" placeholder="Expense Category">
+            <button onclick="addExpense()">Add Expense</button>
+        </div>
+    </div>
+
+
+
+        <div class="treasure-history">
+            <h2>TREASURE HISTORY</h2>
+            <div class="table-wrapper">
+                <table id="transaction-history">
+                    <tr>
+                        <th>Description</th>
+                        <th>Category</th>
+                        <th>Amount ($)</th>
+                        <th>Type</th>
+                        <th>Action</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="result-treasure">
+            <h2>TREASURE SUMMARY</h2>
+            <p>Total Income: <span id="total-income">0</span></p>
+            <p>Total Expenses: <span id="total-expenses">0</span></p>
+            <p>Balance: <span id="balance">0</span></p>
+        </div>
+
+        <div class="clear-button-group">
+            <button id="clears" onclick="clearAll()">Clear All</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
